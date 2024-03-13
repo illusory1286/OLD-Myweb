@@ -1,0 +1,52 @@
+/* 標題 */
+.head {
+    font-size: 1.5em;
+    background-color: bisque;
+    padding: 10px; /* 可根據需要調整內容與邊框的距離 */
+    box-sizing: border-box; /* 保證 padding 和 border 不會增加元素的寬度 */
+}
+
+/* 內文 */
+.content {
+    font-size: 1em;
+    text-align: left; /* 讓內容靠左對齊 */
+    width: 100%; /* 100% 寬度，填滿父容器的寬度 */
+    box-sizing: border-box; /* 保證 padding 和 border 不會增加元素的寬度 */
+}
+
+
+.Wehelp {
+    text-align: center; /* 將內容置中 */
+    padding: 0 70px; /* 左右留白 */
+    display: flex; /* 設定為 flex 容器 */
+    flex-direction: column; /* 垂直方向排列子元素 */
+}
+
+/* 桌機 */
+@media(max-width:1800px){
+    /* 螢幕寬度小於1800px,套用這css */
+    .Wehelp{
+        margin: 0 auto; /* 將內容置中 */ 
+    }
+    .content{
+        flex-wrap: wrap;
+        font-size: 1.5em;
+        width: 95%;
+    }
+} 
+
+/* 手機 */
+@media(max-width:500px){
+    /* 螢幕寬度小於1250px,套用這css */
+    .Wehelp {
+        padding: 0 10px; /* 縮小留白 */
+    }
+    .head {
+        font-size: 1em;
+    }
+    .content {
+        width: 100%; /* 100% 寬度，填滿螢幕 */
+        font-size: 1em; /* 字體放大 */
+    }
+
+} 
